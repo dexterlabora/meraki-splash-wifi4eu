@@ -19,38 +19,70 @@ www.InternetOfLEGO.com
 LICENSE: MIT
 "Have Fun!, use and abuse"
 -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-    </head>
-    <div class="container">  
-      
-      <form id="loginForm" action="#">
-        <center><a href="http://developers.meraki.com"><img src="./img/meraki-logo.png" width="50%"/></a></center>
-        <br>
-        <fieldset>
-          <input id="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
-        </fieldset>
-        <fieldset>
-          <input id="email" placeholder="Your Email Address" type="email" tabindex="2" required>
-        </fieldset>
-        <fieldset>
-          <input id="company" placeholder="Your Company (optional)" type="text" tabindex="3">
-        </fieldset>
-        <fieldset>
-          <button type="submit" >Log in to WiFi</button>
-        </fieldset>
-        <p class="copyright">Sample by <a href="http://www.InternetOfLEGO.com" target="_blank" title="Internet of LEGO">Internet of LEGO</a></p>
-      </form>
-    </div>
-    <hr>
-    <h4>Debugging Stats</h4>
-    <p><label>Base Grant URL: </label><label id="baseGrantURL"></label></p>
-    <p><label>User Continue URL: </label><label id="userContinueURL"></label></p>
-    <p><label>Client IP: </label><label id="clientIP"></label></p>
-    <p><label>Client MAC: </label><label id="clientMAC"></label></p>
-    <p><label>Access Point MAC: </label><label id="nodeMAC"></label></p>
-        
-    <script src="./js/meraki.js"></script>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script type="text/javascript">
+      var wifi4euTimerStart = Date.now();
+      var wifi4euNetworkIdentifier = "NETWORK_IDENTIFIER"; // UPDATE WITH REAL VALUE
+      var wifi4euLanguage = "PORTAL_LANGUAGE"; // UPDATE WITH REAL VALUE
+    </script>
+    <script
+      type="text/javascript"
+      src="https://collection.wifi4eu.ec.europa.eu/wifi4eu.min.js"
+    ></script>
+  </head>
+  <div class="container">
+    <form id="loginForm" action="#">
+      <center>
+        <a href="http://developers.meraki.com"
+          ><img src="./img/wifi4eu.jpg" width="50%"
+        /></a>
+      </center>
+      <br />
+      <fieldset>
+        <input
+          id="name"
+          placeholder="Your name"
+          type="text"
+          tabindex="1"
+          required
+          autofocus
+        />
+      </fieldset>
+      <fieldset>
+        <input
+          id="email"
+          placeholder="Your Email Address"
+          type="email"
+          tabindex="2"
+          required
+        />
+      </fieldset>
+  
+      </fieldset>
+      <fieldset>
+        <button type="submit">Log in to WiFi</button>
+      </fieldset>
+      <p class="copyright">
+        Sample by
+        <a
+          href="https://create.meraki.io"
+          target="_blank"
+          title="Meraki.io"
+          >Meraki.io</a
+        >
+      </p>
+    </form>
+  </div>
+  <hr />
+  <h4>Debugging Stats</h4>
+  <p><label>Base Grant URL: </label><label id="baseGrantURL"></label></p>
+  <p><label>User Continue URL: </label><label id="userContinueURL"></label></p>
+  <p><label>Client IP: </label><label id="clientIP"></label></p>
+  <p><label>Client MAC: </label><label id="clientMAC"></label></p>
+  <p><label>Access Point MAC: </label><label id="nodeMAC"></label></p>
+
+  <script src="./js/meraki.js"></script>
 </html>
